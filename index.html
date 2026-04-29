@@ -79,6 +79,65 @@
                 align-items: center;
             }
         }
+
+        .obra-extra {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .status-indicator {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .status-indicator.green {
+            background-color: #4CAF50;
+        }
+
+        .status-indicator.yellow {
+            background-color: #FFC107;
+        }
+
+        .status-indicator.red {
+            background-color: #F44336;
+        }
+
+        .percentual-total {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .ultima-atualizacao {
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        button {
+            background-color: #222;
+            color: #fff;
+            border: 1px solid #555;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: fit-content;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
     </style>
 </head>
 
@@ -91,52 +150,75 @@
 
     <section>
         <h2>RDO e Cronograma</h2>
-
         <div class="obra-card">
-            <h2>Campos Belos - Itafós - 29/04/2026</h2>
+            <h2>Uruçui - PI</h2>
+
+            <!-- RDO -->
             <div class="obra-stats">
-                <div class="stat">Total Pessoas<span>15</span></div>
-                <div class="stat">Presentes<span>15</span></div>
-                <div class="stat">Faltas<span>0</span></div>
-                <div class="stat">Atestados<span>0</span></div>
+                <div class="stat">Total Pessoas<span>50</span></div>
+                <div class="stat">Presentes<span>45</span></div>
+                <div class="stat">Faltas<span>3</span></div>
+                <div class="stat">Atestados<span>2</span></div>
+            </div>
+
+            <!-- Planejamento -->
+            <div class="obra-plan">
+                <h3>Planejamento</h3>
+                <div class="obra-stats">
+                    <div class="stat">% Planejada<span>80%</span></div>
+                    <div class="stat">% Realizada<span>75%</span></div>
+                    <div class="stat">Desvio<span>-5%</span></div>
+                </div>
+            </div>
+
+            <!-- Indicadores e botões -->
+            <div class="obra-extra">
+                <div class="status">
+                    <span class="status-indicator red"></span> Atrasada
+                </div>
+                <div class="percentual-total">
+                    Total Realizado: <strong>75%</strong>
+                </div>
+                <div class="ultima-atualizacao">
+                    Última atualização: 29/04/2026
+                </div>
+                <button onclick="window.open('curvas_uruçui.html', '_blank')">Ver Curva S</button>
             </div>
         </div>
 
         <div class="obra-card">
-            <h2>Uruçui - PI - 27/04/2026</h2>
+            <h2>Campos Belos - Itafós</h2>
+
+            <!-- RDO -->
             <div class="obra-stats">
-                <div class="stat">Total Pessoas<span>0</span></div>
-                <div class="stat">Presentes<span>0</span></div>
-                <div class="stat">Faltas<span>0</span></div>
-                <div class="stat">Atestados<span>0</span></div>
+                <div class="stat">Total Pessoas<span>50</span></div>
+                <div class="stat">Presentes<span>45</span></div>
+                <div class="stat">Faltas<span>3</span></div>
+                <div class="stat">Atestados<span>2</span></div>
             </div>
 
+            <!-- Planejamento -->
             <div class="obra-plan">
                 <h3>Planejamento</h3>
                 <div class="obra-stats">
-                    <div class="stat">% Planejada<span>0%</span></div>
-                    <div class="stat">% Realizada<span>0%</span></div>
-                    <div class="stat">Desvio<span>0%</span></div>
+                    <div class="stat">% Planejada<span>60%</span></div>
+                    <div class="stat">% Realizada<span>75%</span></div>
+                    <div class="stat">Desvio<span>-5%</span></div>
                 </div>
             </div>
-        </div>
 
-        <div class="obra-card">
-            <h2>Ariranha - Colombo - 27/04/2026</h2>
-            <div class="obra-stats">
-                <div class="stat">Total Pessoas<span>0</span></div>
-                <div class="stat">Presentes<span>0</span></div>
-                <div class="stat">Faltas<span>0</span></div>
-                <div class="stat">Atestados<span>0</span></div>
-            </div>
-
-            <div class="obra-plan">
-                <h3>Planejamento</h3>
-                <div class="obra-stats">
-                    <div class="stat">% Planejada<span>0%</span></div>
-                    <div class="stat">% Realizada<span>0%</span></div>
-                    <div class="stat">Desvio<span>0%</span></div>
+            <!-- Indicadores e botões -->
+            <div class="obra-extra">
+                <div class="status">
+                    <span class="status-indicator green"></span> Dentro do Planejado
                 </div>
+                <div class="percentual-total">
+                    Total Realizado: <strong>75%</strong>
+                </div>
+                <div class="ultima-atualizacao">
+                    Última atualização: 29/04/2026
+                </div>
+                <button onclick="window.open('curvas_camposbelos.html', '_blank')">Ver Curva S</button>
             </div>
         </div>
 
